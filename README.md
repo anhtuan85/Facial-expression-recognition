@@ -61,11 +61,11 @@ python image_demo.py --trained_model path/to/the/trained/model --mode "haarcasca
 ```
 Example:
 ```
-python image_demo.py --trained_model model_state.pth.tar mode "haarcascade" --input ./input.jpg --output ./out.jpg
+python image_demo.py --trained_model model_state.pth.tar --mode "haarcascade" --input ./input.jpg --output ./out.jpg
 ```
 
 ```
-python image_demo.py --trained_model model_state.pth.tar mode "mtcnn" --input ./input.jpg --output ./out.jpg
+python image_demo.py --trained_model model_state.pth.tar --mode "mtcnn" --input ./input.jpg --output ./out.jpg
 ```
 ![alt text](https://github.com/anhtuan85/Facial-expression-recognition/blob/master/images/out1.png)
 
