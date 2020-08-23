@@ -4,3 +4,4 @@ pillow
 torch>=1.2.0
 torchsummary
 torchvision
+mtcnn

@@ -10,7 +10,7 @@ from utils import save_checkpoint, set_lr, clip_gradient
 import torch.optim as optim
 import argparse
 
-device = torch.device("cuda: 0" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--dataset_root", default= "fer2013/fer2013.csv", help = "path to dataset")

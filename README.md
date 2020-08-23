@@ -5,7 +5,7 @@ Facial expression recognition using Pytorch on FER2013 dataset, achieving accura
 
 * Clone this repository (only support Python 3+)
 * Download FER2013 dataset in [Kaggle](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge)
-* Download VGG19 pretrained ([Google Drive](https://drive.google.com/file/d/1-4aff4Nms0_xdTEXSZdAVjBHRkY2iChx/view?usp=sharing))
+* Download VGG19 pretrained ([Google Drive](https://drive.google.com/file/d/15qjJjOEWvzcAvJIwZfl7nFlk4Nw76VG1/view?usp=sharing))
 * Install requirements:
 ```
 pip install -r requirements.txt
@@ -51,17 +51,21 @@ Class-wise accuracy:
 ## Face Detection
 
 * [x] Haar Cascades
-* [ ] MTCNN
+* [x] MTCNN (from link [here](https://github.com/ipazc/mtcnn))
 
 ## Demo
 
 Predict image, run `image_demo.py`:
 ```
-python image_demo.py --trained_model path/to/the/trained/model --input path/to/input/image --output path/to/output/image
+python image_demo.py --trained_model path/to/the/trained/model --mode "haarcascade"(or "mtcnn") --input path/to/input/image --output path/to/output/image
 ```
 Example:
 ```
-python image_demo.py --trained_model model_state.pth.tar --input ./input.jpg --output ./out.jpg
+python image_demo.py --trained_model model_state.pth.tar mode "haarcascade" --input ./input.jpg --output ./out.jpg
+```
+
+```
+python image_demo.py --trained_model model_state.pth.tar mode "mtcnn" --input ./input.jpg --output ./out.jpg
 ```
 ![alt text](https://github.com/anhtuan85/Facial-expression-recognition/blob/master/images/out1.png)
 
@@ -71,5 +75,5 @@ Some example in folder ```images```
 
 ## TODO
 I hope to complete the to-do list in the near future:
-* [ ] Improve model face detection and classifier
+* [x] Improve model face detection and classifier
 * [ ] Demo with video

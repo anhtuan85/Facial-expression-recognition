@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 
-device = torch.device("cuda: 0" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 classes = ('Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral')
 
 def save_checkpoint(epoch, model, optimizer):
