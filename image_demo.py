@@ -52,7 +52,7 @@ def detect():
 		faces = []
 		for person in result:
 			faces.append(person["box"])
-	if faces is not None:
+	if faces != []:
 		for (x, y, w, h) in faces:
 			roi = original_image[y:y+h, x:x+w]
 			roi_gray = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
