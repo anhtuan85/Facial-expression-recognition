@@ -82,4 +82,4 @@ Some example in folder ```images```
 ## TODO
 I hope to complete the to-do list in the near future:
 * [x] Improve model face detection and classifier
-* [ ] Demo with video
+* [x] Demo with video
