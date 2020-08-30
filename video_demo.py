@@ -42,7 +42,7 @@ transform_test = transforms.Compose([
 
 def detect_video():
 	vs = cv2.VideoCapture(image_path)
-	writer = None
+	writer = cv2.VideoWriter(args.output, 0x7634706d, args.save_fps, (int(vs.get(4)), int(vs.get(3))), True)
 	(W, H) = (None, None)
 	
 	detector = MTCNN()
@@ -80,4 +80,7 @@ def detect_video():
 				
 				cv2.putText(frame, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5,(255, 0, 0), 2)
 		#Write video
-		
+		writer.write(frame)
+	writer.release()
+if __name__ == "__main__":
+	detect_video()

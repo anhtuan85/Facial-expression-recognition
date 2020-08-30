@@ -67,6 +67,12 @@ python image_demo.py --trained_model model_state.pth.tar --mode "haarcascade" --
 ```
 python image_demo.py --trained_model model_state.pth.tar --mode "mtcnn" --input ./input.jpg --output ./out.jpg
 ```
+
+With video, run `video_demo.py`:
+```
+python video_demo.py --trained_model path/to/the/trained/model --input path/to/input/video --output path/to/output/video --save_fps 24
+```
+
 ![alt text](https://github.com/anhtuan85/Facial-expression-recognition/blob/master/images/out1.png)
 
 ![alt text](https://github.com/anhtuan85/Facial-expression-recognition/blob/master/images/out3.jpg)
